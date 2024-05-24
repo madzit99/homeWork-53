@@ -11,7 +11,7 @@ const AddTaskForm:React.FC<Props> = ({
 }) => {
     return (
         <div className="my-form">
-            <input type="text" id="name" className="my-form" value={value} onChange={edit}/>
+            <input type="text" id="name" placeholder="Добавьте задачу" className="my-input" value={value} onChange={edit}/>
             <button type="button" id="btn" className="btn" onClick={addTask}>Добавить</button>
         </div>
     )

@@ -22,14 +22,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -45,6 +37,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  height: 50px;
 }
 button:hover {
   border-color: #646cff;
@@ -65,4 +58,30 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.my-form {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.my-input {
+  flex-grow: 1;
+
 }
