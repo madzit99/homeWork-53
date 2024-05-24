@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import AddTaskForm from './AddTaskForm/AddTaskForm';
+import Task from './Task/Task';
 
-interface Task {
+interface TaskType {
   text: string;
   key: string;
 }
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]> ([
+  const [tasks, setTasks] = useState<TaskType[]> ([
     { text:'Приготовить завтрак', key:'1'},
     { text:'Приготовить обед', key:'2'},
     { text:'Приготовить ужин', key:'3'},
@@ -38,6 +39,9 @@ function App() {
   return (
     <div className="container">
       <AddTaskForm edit={edit} addTask={addTask} value={value} />
+      {tasks.map((task) => (
+        <Task text={task.text} onDelete={() => deleteTask(task.key)} />
+      ))}
     </div>
   )
 }
